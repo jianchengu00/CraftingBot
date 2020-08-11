@@ -1,6 +1,9 @@
 # chefcurrybot
 ## Requires: 
   * Node.js w/ version v12.x.x
+  * Python 3.3+
+    * BeautifulSoup4
+    * Requests
 ## Dependencies:
   * discord.js
 
