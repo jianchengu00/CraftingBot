@@ -1,4 +1,4 @@
-# chefcurrybot
+# CraftingBot
 ## Requires: 
   * Node.js w/ version v12.x.x
     * discord.js
