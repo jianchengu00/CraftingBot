@@ -3,6 +3,7 @@
   * Node.js w/ version v12.x.x
     * discord.js
     * axios
+    * jquery
   * Python 3.3+
     * Flask
     * BeautifulSoup4
