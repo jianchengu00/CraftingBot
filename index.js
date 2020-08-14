@@ -1,11 +1,3 @@
-// TODO: IDEAS
-/*
-    Scraping the web for minecraft recipes?
-    Maybe print out the general ingredients and then a generated text image of
-    ingredient placements
-*/
-
-
 // require Node's file system module
 const fs = require('fs');
 // require config file to get API key
@@ -52,7 +44,7 @@ client.on('message', message => {
     // if no bot commands were provided, then args should be expected to be empty, 
     // as the bot name elem (also the only elem) was removed from args
     if (!args.length && botName === `${prefix}`) {
-        message.channel.send('Asking me for a command? Type \"$cb help\" for more information');
+        message.channel.send('Asking me for a command? Type \"$craft help\" for more information');
         return;
     } 
 
@@ -61,7 +53,7 @@ client.on('message', message => {
 
     // ignore if command doesn't exist
     if (!client.commands.has(commandName)) {
-        message.channel.send('CraftingBot doesn\'t know this command! Type \"$cb help\" for more information');
+        message.channel.send('CraftingBot doesn\'t know this command! Type \"$craft help\" for more information');
         return;
     }
 
@@ -70,9 +62,10 @@ client.on('message', message => {
 
     // check if command is server/guild + text channel ONLY
     if (command.guildOnly && message.channel.type !== 'text') {
-        return message.reply('I can\'t execute that command inside DMs!');
+        return message.reply('I can\'t execute this command inside DMs!');
     }
 
+    // TODO: needs better argument handling by command
     // check if this specific command requires arguments, and if yes, if there there >= 1 args provided
     if (command.args && !args.length) {
         let reply = `You didn't provide any arguments, ${message.author}!`;
@@ -88,6 +81,7 @@ client.on('message', message => {
         command.execute(message, args);
     } catch (error) {
         message.reply('There was an error trying to execute that command!');
+        message.reply(error.toString());
     }
 
 });

@@ -1,6 +1,6 @@
 module.exports = {
-	name: 'callout',
-    description: 'Call Out Users Listed',
+	name: 'greet',
+    description: 'Greet Users Listed',
     guildOnly: true,
     args: true,
     usage: '<user> ... <user>',

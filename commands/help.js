@@ -9,9 +9,10 @@ module.exports = {
 	},
 };
 
-helpMessage = '```$cb\n\n' + 
+helpMessage = '```$craft\n\n' +
                 '-- <bot currently under development>\n\n' +
                 'Commands:\n' +
-                '\tcallout    -- Mentions all users listed with \"What\'s up!\"\n' +
+                '\trecipe     -- Prints a diagram of a Minecraft item\'s recipe\n' +
+                '\tgreet      -- Mentions all users listed with \"What\'s up!\"\n' +
                 '\tserver     -- Prints the server information\n' +
                 '\tuser-info  -- Prints user information of whoever entered the command```';

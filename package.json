@@ -1,7 +1,7 @@
 {
-  "name": "chefcurrybot",
+  "name": "craftingbot",
   "version": "1.0.0",
-  "description": "A Discord bot for fun interactions with server members",
+  "description": "A Discord bot to provide extra automated help in Minecraft",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,6 +9,9 @@
   "author": "Jianchen Gu",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^12.2.0"
-  }
+    "axios": "^0.19.2",
+    "discord.js": "^12.2.0",
+    "jquery": "^3.5.1"
+  },
+  "devDependencies": {}
 }
