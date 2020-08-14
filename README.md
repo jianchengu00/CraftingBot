@@ -3,7 +3,6 @@
   * Node.js w/ version v12.x.x
     * discord.js
     * axios
-    * fs
   * Python 3.3+
     * Flask
     * BeautifulSoup4
@@ -22,8 +21,8 @@
   ```
     
   Some commands are written in Python, and they need to be called via a localhost Flask API. First set up this server like so:   
-  **$** python python_api.py
+  `$ python python_api.py`
   
   Since the JS bot is already configured to localhost, then just start it like so:  
-  **$** node index.js
+  `$ node index.js`
   
