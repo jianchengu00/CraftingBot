@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 
 app = Flask(__name__)
 
+# TODO: maybe add another function to provide description about a Minecraft item
+
 
 @app.route('/functions/recipe', methods=['GET'])
 def api_id():
@@ -14,8 +16,7 @@ def api_id():
     if 'item_name' in request.args:
         item_name = str(request.args['item_name'])
     else:
-        # TODO: an error to return to discord bot
-        return "Error: No id field provided. Please specify an id."
+        return jsonify({})
 
     # recipe with description + 9 block structure as dictionary representation
     recipe = {}
@@ -32,7 +33,11 @@ def api_id():
 
     # find and add item crafting description as a data point to be returned
     crafting_description = crafting_soup.find('tbody').find_all('tr')
-    recipe['description'] = crafting_description[1].find('td').get_text(strip=True)
+    # strip all whitespace and rejoin with a single whitespace for uniformity, then split by distinct recipe items
+    recipe_text = crafting_description[1].find('td').get_text(' ', strip=True).split(' + ')
+    # add quotes to each distinct recipe item in a recipe for more user clarity
+    recipe_text_formatted = [f'\"{text}\"' for text in recipe_text]
+    recipe['description'] = ' + '.join(recipe_text_formatted)
 
     # get soup object of crafting recipe's 9 block structure
     recipe_soup = crafting_soup.find('span', attrs={'class': 'mcui-input'})

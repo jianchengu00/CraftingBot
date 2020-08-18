@@ -6,14 +6,14 @@ module.exports = {
     guildOnly: true,
     args: true,
     cooldown: 5,
-    usage: '<minecraft_item>',
+    usage: '<item> <name>',
 	execute(message, args) {
 	    // GET request to local Flask server to run Python backend function
 	    axios({
             method: 'get',
             url: 'http://127.0.0.1:5000/functions/recipe',
             params: {
-                item_name: args[0],
+                item_name: args.join('_'),
             },
             responseType: 'json'
 	    }).then(function (response) {
