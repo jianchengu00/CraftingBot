@@ -12,7 +12,7 @@
 ## How to Run:
   **Important!!**   
   My Discord API key and bot prefix are stored in a local **config.json** file, which is intentionally gitignored from this repo for security.
-  $CraftingBot is configured to use the **$craft** prefix  
+  CraftingBot is configured to use the **$craft** prefix  
   You need to generate your own Discord API key as well as set your own prefix if you'd like, then add them **config.json** like such:  
   ```
   {   
