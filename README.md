@@ -27,12 +27,12 @@
   Since the JS bot is already configured to localhost, it will be able to reach our Flask API endpoints, so simply start the bot:  
   `$ node index.js`
   
-## Photo Demo
+## Photo Demo:
 ### Help Command
 <img width="776" alt="Screen Shot 2020-08-18 at 7 07 57 PM" src="https://user-images.githubusercontent.com/25871150/90587575-8fa85200-e18e-11ea-8202-2833dcb6f5c7.png">
 
 ### Recipe Command
-<img width="752" alt="Screen Shot 2020-08-18 at 3 51 07 PM" src="https://user-images.githubusercontent.com/25871150/90587486-57087880-e18e-11ea-81c9-778cc107f68f.png">
+<img width="773" alt="Screen Shot 2020-08-19 at 1 41 42 PM" src="https://user-images.githubusercontent.com/25871150/90687500-c5e2e180-e221-11ea-8d5d-f4cfb77ab35f.png">
 
 ### Description Command
 * Default
