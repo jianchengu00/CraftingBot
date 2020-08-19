@@ -1,13 +1,13 @@
 from flask import Flask, request, jsonify
 import requests
 from bs4 import BeautifulSoup
-import pprint
 
 
 app = Flask(__name__)
 
 
 # function called when specified endpoint is reached, and will scrape the Minecraft Wiki
+# page to find an item's description, with different levels of verbosity based on user input
 @app.route('/functions/description', methods=['GET'])
 def find_description():
     # Check if an ID was provided as part of the URL.
