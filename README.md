@@ -21,9 +21,9 @@
   } 
   ```
     
-  Some commands are written in Python, and they need to be called via a localhost Flask API. First set up this server like so:   
+  Primary commands are written in Python, and they need to be hosted by a local Flask API to be callable by JavaScript. First start server like so:   
   `$ python python_api.py`
   
-  Since the JS bot is already configured to localhost, then just start it like so:  
+  Since the JS bot is already configured to localhost, it will be able to reach the Flask API endpoints, so simply start the bot:  
   `$ node index.js`
   

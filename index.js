@@ -68,7 +68,6 @@ client.on('message', message => {
         return message.reply('I can\'t execute this command inside DMs!');
     }
 
-    // TODO: needs better argument handling by command
     // check if this specific command requires arguments, and if yes, if there there >= 1 args provided
     if (command.args && !args.length) {
         let reply = `You didn't provide any arguments, ${message.author}!`;

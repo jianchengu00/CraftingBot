@@ -13,14 +13,14 @@ module.exports = {
             method: 'get',
             url: 'http://127.0.0.1:5000/functions/recipe',
             params: {
-                item_name: args.join('_'),
+                item_name: args.join('_')
             },
             responseType: 'json'
 	    }).then(function (response) {
 	        // get JSON response object
             let recipe_json = response.data;
             // print out crafting description
-            message.channel.send(recipe_json["description"]);
+            message.channel.send(`\`\`\`${recipe_json["description"]}\`\`\``);
             // print out prettified crafting structure from JSON
             let reply = '```';
             for (let row in recipe_json) {
